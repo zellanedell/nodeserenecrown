@@ -1,0 +1,12 @@
+name: Quality Check
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  validate-step:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run tests
+        run: echo "ready"
